@@ -16,7 +16,7 @@
         <thead>
             <tr>
                 <th></th>
-                <th width="12"><span id="pause_header"class="glyphicon glyphicon-info-sign" title="Use this toggle to pause a DAG. The scheduler won't schedule new tasks instances for a paused DAG. Tasks already running at pause time won't be affected."></span></th>
+                <!-- <th width="12"><span id="pause_header"class="glyphicon glyphicon-info-sign" title="Use this toggle to pause a DAG. The scheduler won't schedule new tasks instances for a paused DAG. Tasks already running at pause time won't be affected."></span></th> -->
                 <th>DAG</th>
                 <th>Schedule</th>
                 <th>Owner</th>
@@ -38,11 +38,11 @@
                     </a>
                     {% endif %}
                 </td>
-                <td>
+                <!-- <td>
                   {% if dag_id in orm_dags %}
                     <input id="toggle-{{ dag_id }}" dag_id="{{ dag_id }}" type="checkbox" {{ "checked" if not orm_dags[dag_id].is_paused else "" }} data-toggle="toggle" data-size="mini">
                   {% endif %}
-                </td>
+                </td> -->
                 <td>
                     {% if dag %}
                     <a href="{{ url_for('airflow.graph', dag_id=dag.dag_id) }}">
